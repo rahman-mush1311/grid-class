@@ -52,7 +52,7 @@ class ParsingObservations:
         if re.match(r"DeadObjectXYs\.txt", filename):
             return 'D', ''
         else:
-            file_pattern = re.compile(r'''(\d{1}-\d{1}-\d{2})_(\d+)_ObjectXYs\.txt|AliveObjectXYs(\d+)a''')
+            file_pattern = re.compile(r'''(\d{1}-\d{1}-\d{2})_(\d+)_ObjectXYs\.txt|AliveObjectXYsp(\d+)''')
             match = file_pattern.search(filename)
             if match.group(1)and match.group(2):
                 return (match.group(1), match.group(2)) 
